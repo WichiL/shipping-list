@@ -1,0 +1,15 @@
+input ShippingElement {
+  idUser: Int!
+  element: String!
+}
+
+type ShippingList {
+  id: Int!
+  id_user: Int!
+  element: String!
+}
+
+type Mutation {
+  addElementToShippingList(input: ShippingElement!): Boolean
+  deleteElementFromShippingList(idShippingList: Int!, idUser: Int!): Boolean
+}

@@ -1,0 +1,35 @@
+scalar Upload
+
+input UserInput {
+  name: String!
+  first_name: String!
+  last_name: String!
+  email: String!
+  username: String!
+  password: String
+  avatar: Upload
+}
+
+type UserData {
+  id: Int
+  name: String
+  first_name: String
+  last_name: String
+  email: String
+  username: String
+  Avatar: Avatar
+  ShippingList: [ShippingList]
+}
+
+type Avatar {
+  id: Int!
+  avatar_url: String!
+}
+
+type Query {
+  getUser(id: Int!): UserData
+}
+
+type Mutation {
+  updateUser(idUser: Int!, input: UserInput!): Boolean
+}

@@ -1,0 +1,100 @@
+//LAYOUT ALIGN GENERAL
+.layout-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding: 5%;
+}
+
+//LAYOUT ALIGN LOGIN
+.full-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  span {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 4%;
+  }
+}
+
+.full-box {
+  background-color: lightgray;
+  padding: 2%;
+  width: 500px;
+  border-radius: 5%;
+  button {
+    float: right;
+  }
+}
+
+//USER DATA ADJUST
+.container-card-data {
+  display: flex;
+  gap: 15%;
+}
+//IMAGE ADJUST
+.fit-img {
+  width: 160px;
+  height: 160px;
+  right: 20px;
+  top: 15px;
+  object-fit: cover;
+  border: 2px solid;
+}
+
+.user-pic {
+  display: flex;
+  align-items: center;
+}
+
+//ALIGN CARD USER DATA HEADER AND BUTTON
+.header-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+//ADJUSMENT FOR UPLOAD IMAGE SECTION
+.container-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 50px auto;
+  .avatar-upload {
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+    top: 15px;
+    input {
+      display: none;
+      + label {
+        width: 34px;
+        height: 34px;
+        i {
+          padding-top: 20%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .avatar-preview {
+    width: auto;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid lightgray;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    > img {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
