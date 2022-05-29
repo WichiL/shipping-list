@@ -1,0 +1,26 @@
+input UserLoginInput {
+  userName: String!
+  password: String!
+}
+
+type UserAuth {
+  token: String!
+}
+
+type TokenDecrypted {
+  id: Int!
+  username: String!
+  first_name: String!
+  last_name: String!
+  id_shopping_cart: Int!
+  email: String!
+  name: String!
+  # avatar: String
+  iat: Int!
+  exp: Int!
+}
+
+type Mutation {
+  decryptToken(token: String!): TokenDecrypted!
+  authUser(input: UserLoginInput!): UserAuth!
+}
