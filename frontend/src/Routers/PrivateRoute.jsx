@@ -14,6 +14,7 @@ export const PrivateRoute = ({ isAuth, component: Component, ...rest }) => {
       });
       return <Redirect to="/login" />;
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
